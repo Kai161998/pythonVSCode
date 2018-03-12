@@ -168,13 +168,13 @@ class DebugManager implements Disposable {
     private readonly outputProtocolParser: IProtocolParser;
     private readonly protocolLogger: IProtocolLogger;
     private readonly protocolMessageWriter: IProtocolMessageWriter;
-    private isServerMode!: boolean;
+    private isServerMode: boolean = false;
     private readonly disposables: Disposable[] = [];
-    private hasShutdown!: boolean;
+    private hasShutdown: boolean = false;
     private debugSession?: PythonDebugger;
     private ptvsdProcessId?: number;
-    private killPTVSDProcess!: boolean;
-    private terminatedEventSent!: boolean;
+    private killPTVSDProcess: boolean = false;
+    private terminatedEventSent: boolean = false;
     private readonly initializeRequestDeferred: Deferred<DebugProtocol.InitializeRequest>;
     private get initializeRequest(): Promise<DebugProtocol.InitializeRequest> {
         return this.initializeRequestDeferred.promise;
