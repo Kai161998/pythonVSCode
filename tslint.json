@@ -54,7 +54,11 @@
         "no-bitwise": false,
         "eofline": true,
         "switch-final-break": false,
-        "no-implicit-dependencies":["vscode"],
-        "no-unnecessary-type-assertion":false
+        "no-implicit-dependencies": [
+            "vscode"
+        ],
+        "no-unnecessary-type-assertion": false,
+        "no-submodule-imports": false,
+        "no-redundant-jsdoc": false
     }
 }
