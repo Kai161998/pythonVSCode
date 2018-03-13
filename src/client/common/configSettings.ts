@@ -54,7 +54,7 @@ export class PythonSettings extends EventEmitter implements IPythonSettings {
         this.disposables.push(vscode.workspace.onDidChangeConfiguration(() => {
             this.initializeSettings();
 
-            // If workspace config changes, then we could have a cascading effect of on change events.
+            // If workspace config changes, then we could have a cascading effect of on-change events.
             // Let's defer the change notification.
             setTimeout(() => this.emit('change'), 1);
         }));
